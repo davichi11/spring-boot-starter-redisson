@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.davichi11</groupId>
+    <groupId>com.github.hcl</groupId>
     <artifactId>spring-boot-starter-redisson</artifactId>
     <version>1.0.0.RELEASE</version>
     <packaging>jar</packaging>
@@ -20,7 +20,7 @@
 
     <developers>
         <developer>
-            <id>davichi11</id>
+            <id>hcl</id>
             <name>Allen Hu</name>
             <email>davichi2009@gmail.com</email>
             <url>https://twitter.com/Yi8mAkY2qMNrcdY</url>
