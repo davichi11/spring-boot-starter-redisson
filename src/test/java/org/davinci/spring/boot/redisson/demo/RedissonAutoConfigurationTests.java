@@ -2,6 +2,7 @@ package org.davinci.spring.boot.redisson.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.redisson.api.RBloomFilter;
 import org.redisson.api.RHyperLogLog;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,4 +27,15 @@ public class RedissonAutoConfigurationTests {
         System.out.println(test.count());
     }
 
+    @Test
+    public void testBloomFilter() {
+        RBloomFilter<String> test = redissonClient.getBloomFilter("test");
+
+        test.tryInit(10000L, 0.01);
+        for (int i = 0; i < 10000; i++) {
+            test.add(String.valueOf(i));
+        }
+
+        System.out.println(test.contains("333"));
+    }
 }
